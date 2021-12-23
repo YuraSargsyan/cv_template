@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+        'jane_doe work_experience' 
+        'jane_doe education'
+        'footer footer';
+        
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 1fr 1fr 10%;
+        grid-gap: 1em;
+        height: 100vh;
+}
+
+
+
+
+
+
+
+.cv_photo {
+    background-image: url(./images/avatar_hat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.work_experience {
+    grid-area: work_experience;
+    background-color: yellow;
+}
+
+.education {
+    grid-area: education;
+    background-color: yellowgreen;
+    border: 2px solid red;
+}
+
+footer {
+    grid-area: footer;
+    background-color: green;
+}
+
