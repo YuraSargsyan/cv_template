@@ -10,12 +10,18 @@ main {
   grid-gap: 1em;
   height: 100vh;
 }
+.jane_doe {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
 .cv_photo {
-  background-image: url(images/avatar_hat.jpg);
+  background-image: url('https://www.w3schools.com/w3images/avatar_hat.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: local;
   width: auto;
-  height: auto;
+  height: 200px;
 }
 .work_experience {
   grid-area: work_experience;
