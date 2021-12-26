@@ -3,36 +3,192 @@
   padding: 0;
 }
 main {
-  display: grid;
-  grid-template-areas: 'jane_doe work_experience' 'jane_doe education' 'footer footer';
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 1fr 1fr 10%;
-  grid-gap: 1em;
   height: 100vh;
-}
-.jane_doe {
+  margin-top: 10px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas: 'left_sec right_sec' 'footer footer';
+}
+main .left_section {
+  margin-left: 20px;
+  grid-area: left_sec;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+main .left_section .image {
+  position: relative;
+}
+main .left_section .image img {
   width: 100%;
 }
-.cv_photo {
-  background-image: url('https://www.w3schools.com/w3images/avatar_hat.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: local;
-  width: auto;
-  height: 200px;
+main .left_section .image .jane_doe {
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  font-size: 30px;
 }
-.work_experience {
+main .left_section .info {
+  padding: 15px;
+}
+main .left_section .info p {
+  margin: 15px;
+}
+main .left_section .info p i {
+  padding-right: 20px;
+  font-size: 20px;
+}
+main .left_section .info hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px;
+}
+main .left_section .info .skills {
+  font-size: 24px;
+  font-weight: 900;
+}
+main .left_section .info .container {
+  border-radius: 16px;
+  background-color: #ccc;
+}
+main .left_section .info .container .container1 {
+  background-color: #009688;
+  text-align: center;
+  width: 90%;
+  border-radius: 16px;
+}
+main .left_section .info .container .container2 {
+  background-color: #009688;
+  text-align: center;
+  width: 80%;
+  border-radius: 16px;
+}
+main .left_section .info .container .container3 {
+  background-color: #009688;
+  text-align: center;
+  width: 75%;
+  border-radius: 16px;
+}
+main .left_section .info .container .container4 {
+  background-color: #009688;
+  text-align: center;
+  width: 50%;
+  border-radius: 16px;
+}
+main .left_section .info .languages {
+  font-size: 24px;
+  font-weight: 900;
+}
+main .left_section .info .container_languages {
+  background-color: #ccc;
+  height: 25px;
+  border-radius: 16px;
+}
+main .left_section .info .container_languages .container5 {
+  background-color: #009688;
+  border-radius: 16px;
+  height: 25px;
+}
+main .left_section .info .container_languages .container6 {
+  background-color: #009688;
+  border-radius: 16px;
+  height: 25px;
+  width: 55%;
+}
+main .left_section .info .container_languages .container7 {
+  background-color: #009688;
+  border-radius: 16px;
+  height: 25px;
+  width: 25%;
+}
+main .right_section {
+  grid-area: right_sec;
+  display: inherit;
+  gap: 30px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'work_experience work_experience' 'education education';
+}
+main .right_section .work_experience {
+  padding: 20px;
   grid-area: work_experience;
-  background-color: yellow;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.education {
+main .right_section .work_experience h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+main .right_section .work_experience .experience_container h4 {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 20px 0;
+}
+main .right_section .work_experience .experience_container h5 {
+  font-size: 16px;
+  color: #009688;
+  padding-bottom: 10px;
+}
+main .right_section .work_experience .experience_container h5 i {
+  margin-right: 20px;
+}
+main .right_section .work_experience .experience_container h5 span {
+  display: inline-block;
+  background-color: #009688;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+main .right_section .work_experience .experience_container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+main .right_section .education {
   grid-area: education;
-  background-color: yellowgreen;
-  border: 2px solid red;
+  padding: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-footer {
+main .right_section .education h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+main .right_section .education .education_container h4 {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 20px 0;
+}
+main .right_section .education .education_container h5 {
+  font-size: 16px;
+  color: #009688;
+  padding-bottom: 10px;
+}
+main .right_section .education .education_container h5 i {
+  margin-right: 20px;
+}
+main .right_section .education .education_container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+main .main_footer {
   grid-area: footer;
-  background-color: green;
+  width: 100%;
+  background-color: #009688;
+  color: white;
+  text-align: center;
+  height: 130px;
+}
+main .main_footer p {
+  margin: 20px 0;
+}
+main .main_footer > i:hover {
+  opacity: 0.5;
+}
+main .main_footer a {
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    grid-template-areas: 'left_sec' 'right_sec' 'footer';
+  }
 }
